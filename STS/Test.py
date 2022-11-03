@@ -3,7 +3,6 @@ import torch
 import torch.nn as nn
 import random
 import os
-from apex import amp
 import tqdm
 import time
 import numpy as np
