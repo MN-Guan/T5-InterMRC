@@ -11,7 +11,6 @@ import collections
 from eval_expmrc import evaluate_span
 import re
 import json
-import re
 import nltk
 import copy
 import os
