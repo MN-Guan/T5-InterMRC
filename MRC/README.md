@@ -96,4 +96,4 @@ During training, the cached file named `padding_t5-base_squad_500.json` will be 
 
 After training, `loss.txt` file will be generated in the path where the `T5InterMRC.py` script is located, which shows the performance of the model in the dev set at all checkpoints.
 
-The parameter file of the best model will be displayed in [Data/](https://github.com/MN-Guan/T5-InterMRC/tree/main/MRC/Data) directory.
+The parameter file of the best model will be displayed in `Data/` directory.
