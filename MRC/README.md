@@ -14,14 +14,12 @@
 python Reconstruct_Data.py \
 --random_seed=52 \
 --model_name=t5-base \
---is_test=False \
 --batch_size=50 \
 --state_file=${sts_state_file} \
 --device='cuda:0' \
 --sts_mode=None
 ```
 - `model_name`: Name of basic STS model used to label evidence (Consistent with the model in the `state_file`)
-- `is_test`: Whether to test the precision in the dev set
 - `state_file`: The parameter file of trained STS model
 - `sts_mode`: Mode of labeling evidence (one of the 'f1_score' and None), None indicates that we use STS model to annotate evidence
 Simply, you can run the following command:
