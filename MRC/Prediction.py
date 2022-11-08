@@ -30,7 +30,7 @@ if __name__ == '__main__':
     parser.add_argument('--state_file', type=str, default='./Data/squad_T5_829.pt')
     parser.add_argument('--batch_size', type=int, default=50)
     parser.add_argument('--dev_file_name', type=str, default='./Data/Datasets/ExpMRC/expmrc-squad-dev.json')
-    parser.add_argument('--dataset_name', type=str, default='squad')
+    parser.add_argument('--data_name', type=str, default='squad')
     parser.add_argument('--is_training', action='store_true')
     parser.add_argument('--prediction_file', type=str, default='./pred.json')
     
