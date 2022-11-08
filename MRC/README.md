@@ -65,7 +65,7 @@ python T5InterMRC.py \
 
 Simply, you can run the following command:
 ```
-python T5InterMRC.py
+python T5InterMRC.py --is_new --is_training
 ```
 ## Prediction and Evaluation
 After training, you can use `Prediction.py` to get the prediction file by running:
