@@ -288,7 +288,7 @@ def inference(model, t5_tokenizer, device, eva_iterator, eva_examples, eva_featu
 def test(model, tokenizer, device, args):
     model.load_state_dict(torch.load(args.state_file))
 
-    test_examples = get_ExpMRC_Pred_MRC_examples(args.dev_file_name, args.dataset_name)
+    test_examples = get_ExpMRC_Pred_MRC_examples(args.dev_file_name, args.data_name)
 
     test_features = convert_examples_to_mrc_features(examples=test_examples, 
                                                      tokenizer=tokenizer,
