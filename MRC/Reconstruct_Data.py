@@ -141,7 +141,7 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('--random_seed', type=int, default=52)
     parser.add_argument('--model_name', type=str, default='t5-base')
-    parser.add_argument('--is_test', action="store_true")
+    parser.add_argument('--is_test', action="store_true", help="Whether to test the precision in the dev set")
     parser.add_argument('--batch_size', type=int, default=50)
     parser.add_argument('--state_file', type=str, default=None)
     parser.add_argument('--device', type=str, default='cuda:0')
