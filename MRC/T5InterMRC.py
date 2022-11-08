@@ -184,11 +184,11 @@ def get_qa_inputs(re_outputs, re_input_ids, tokenizer):
     for i in range(re_input_ids.shape[0]):
         context_index = get_index(re_input_ids[i].tolist(), context_id.tolist())
         q_ids = re_input_ids[i][:context_index]
+        # re_outputs[i]: [0, xxx, xxx, ...]
         if 1 in re_outputs[i]:
-            # flag
             c_ids = re_outputs[i][1:re_outputs[i].tolist().index(1)].to(re_input_ids.device)
         else:
-            c_ids = re_outputs[i].to(re_input_ids.device)
+            c_ids = re_outputs[i][1:].to(re_input_ids.device)
         qa_input = torch.cat((q_ids, context_id, c_ids), 0)
         qa_input_list.append(qa_input)
         qa_input_len_list.append(qa_input.shape[0])
