@@ -55,8 +55,8 @@ python T5InterMRC.py \
 --state_file=./Data/T5${time}.pt 
 --prediction_file=./pred.json \
 --mode=t5-base \
---is_new=True \
---is_training=True 
+--is_new
+--is_training
 ```
 - `model_name`: Name of the model you are using (must be one of the 'T5-Shared', 'T5-InterMRC'(default) and 'T5-Independent')
 - `model_level`: The name of basic T5 model ('t5-base', 't5-large', ...), defaulting to 't5-large'
