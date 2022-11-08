@@ -348,8 +348,8 @@ if __name__ == '__main__':
     parser.add_argument('--state_file', type=str, default=f'./Data/T5' + get_time_str() + '.pt')
     parser.add_argument('--prediction_file', type=str, default='./pred.json')
     parser.add_argument('--mode', type=str, default='t5-base')
-    parser.add_argument('--is_new', type=bool, default=True)
-    parser.add_argument('--is_training', type=bool, default=True)
+    parser.add_argument('--is_new', action="store_true")
+    parser.add_argument('--is_training', action="store_true")
     
     args = parser.parse_args()
     t5_model = T5ForConditionalGeneration.from_pretrained(args.model_level)
