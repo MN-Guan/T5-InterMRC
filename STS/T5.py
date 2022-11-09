@@ -42,7 +42,7 @@ from Preprocess import (
 
 
 
-def load_data(tokenizer, cached_features_file):
+def load_data(tokenizer, cached_features_file, args):
     if os.path.exists(cached_features_file):
         train_examples = get_STS_examples(args.dataset_name, args.data_path, 'train', args.train_interval, do_augment=args.do_augment)
         eva_examples = get_STS_examples(args.dataset_name, args.data_path, 'dev', None, do_augment=False)
@@ -71,8 +71,8 @@ def load_data(tokenizer, cached_features_file):
     return train_features, eva_features, train_examples, eva_examples
 
 
-def train(similarity_model, tokenizer, cached_features_file, device):
-    train_features, eva_features, train_examples, eva_examples = load_data(tokenizer, cached_features_file)
+def train(similarity_model, tokenizer, cached_features_file, device, args):
+    train_features, eva_features, train_examples, eva_examples = load_data(tokenizer, cached_features_file, args)
     print(f'train_features_len:{len(train_features)}, eva_features_len:{len(eva_features)}')
     train_iterator = torch.utils.data.DataLoader(train_features,
                                                  collate_fn=mycollate,
@@ -165,7 +165,7 @@ def evaluate(similarity_model, tokenizer, device, eva_iterator, eva_examples, ev
             golds.append(eva_features[i + iterator_index * batch_size]['gold_probability'])
     return (spearmanr(predictions, golds)[0] * 100, pearsonr(predictions, golds)[0] * 100)
 
-def load_test_data(tokenizer):
+def load_test_data(tokenizer, args):
     test_examples = get_STS_examples(args.dataset_name, args.data_path, 'test', None, do_augment=False)
     test_features = STS_convert_examples_to_features(examples=test_examples, 
                                                      tokenizer=tokenizer, 
@@ -175,8 +175,8 @@ def load_test_data(tokenizer):
     return test_examples, test_features
 
 
-def test(similarity_model, tokenizer, device):
-    test_examples, test_features = load_test_data(tokenizer)
+def test(similarity_model, tokenizer, device, args):
+    test_examples, test_features = load_test_data(tokenizer, args)
     similarity_model.load_state_dict(torch.load(args.state_file))
     if args.log_file_name != None:
         with open(args.log_file_name, 'a', encoding='utf-8') as f:
@@ -226,5 +226,5 @@ if __name__ == '__main__':
     with open(args.log_file_name, 'a', encoding='utf-8') as f:
         f.write(f'The STS model has {count_parameters(similarity_model):,} parameters. \n')
     cached_features_file = os.path.join(args.cached_features_file_path, '{}_no_padding_cached_{}_{}{}{}.json'.format(args.dataset_name, str(args.train_interval), str(args.max_len), '_aug' if args.do_augment else '', '_div' if args.do_divide else ''))
-    train(similarity_model, tokenizer, cached_features_file, device)
-    test(similarity_model, tokenizer, device)
+    train(similarity_model, tokenizer, cached_features_file, device, args)
+    test(similarity_model, tokenizer, device, args)
