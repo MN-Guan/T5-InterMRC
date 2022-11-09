@@ -10,6 +10,7 @@
     | -- eval_expmrc.py        # ExpMRC official evaluation script  
 ```
 ## Evidence annotation
+Switch to the path where the `Reconstruct_Data.py` script is located, then
 ```
 python Reconstruct_Data.py \
 --random_seed=52 \
