@@ -11,6 +11,7 @@
 ```
 ## Evidence annotation
 Switch to the path where the `Reconstruct_Data.py` script is located.
+
 Then, simply run the following command:
 ```
 python Reconstruct_Data.py
