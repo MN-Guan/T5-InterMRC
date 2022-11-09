@@ -143,7 +143,7 @@ if __name__ == '__main__':
     parser.add_argument('--model_name', type=str, default='t5-base')
     parser.add_argument('--is_test', action="store_true", help="Whether to test the precision in the dev set")
     parser.add_argument('--batch_size', type=int, default=50)
-    parser.add_argument('--state_file', type=str, default=None)
+    parser.add_argument('--state_file', type=str, default='./../STS/Data/Model_States/STS_T5.pt')
     parser.add_argument('--device', type=str, default='cuda:0')
     parser.add_argument('--sts_mode', type=str, default=None)
     args = parser.parse_args()
