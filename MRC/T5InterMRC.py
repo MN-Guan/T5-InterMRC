@@ -141,7 +141,7 @@ def train(model, t5_tokenizer, cached_features_file, device, args):
                 if global_step % args.save_steps == 0:
                     best_score = ExpMRC_recording(model, t5_tokenizer, device, eva_iterator, eva_examples, eva_features, best_score, global_step, args)
                 epoch_iterator.set_postfix(loss = '%.16f' % (epoch_loss / (step + e * len(train_iterator))), lr='%.8f' % optimizer.state_dict()['param_groups'][0]['lr'])
-    return epoch_loss / epoch / len(train_iterator)
+    return None
 
 def ExpMRC_recording(model, t5_tokenizer, device, eva_iterator, eva_examples, eva_features, best_f1, global_step, args):
     results = inference(model, t5_tokenizer, device, eva_iterator, eva_examples, eva_features, args)
