@@ -23,12 +23,10 @@ python Reconstruct_Data.py \
 --model_name=t5-base \
 --batch_size=50 \
 --state_file=${sts_state_file} \
---device=cuda:0 \
---sts_mode=None
+--device=cuda:0 
 ```
 - `model_name`: Name of basic STS model used to label evidence (Consistent with the model in the `state_file`)
 - `state_file`: The parameter file of trained STS model
-- `sts_mode`: Mode of labeling evidence (one of the 'f1_score' and None), None indicates that we use STS model to annotate evidence
 
 The dataset with annotated evidence will be shown in `MRC/Data/Datasets/ExpMRC/`
 
