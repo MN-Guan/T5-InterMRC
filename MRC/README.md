@@ -58,7 +58,7 @@ python T5InterMRC.py \
 --data_path=./Data/Datasets/ExpMRC/ \
 --device=cuda:0 \
 --log_file_name=./loss.txt \
---state_file=./Data/T5${time}.pt 
+--state_file=./Data/T5${time}.pt \
 --prediction_file=./pred.json \
 --mode=t5-base \
 --is_new \
