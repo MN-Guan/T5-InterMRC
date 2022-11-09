@@ -10,27 +10,35 @@
     | -- eval_expmrc.py        # ExpMRC official evaluation script  
 ```
 ## Evidence annotation
-Switch to the path where the `Reconstruct_Data.py` script is located, then
+Switch to the path where the `Reconstruct_Data.py` script is located.
+Then, simply run the following command:
+```
+python Reconstruct_Data.py
+```
+or
 ```
 python Reconstruct_Data.py \
 --random_seed=52 \
 --model_name=t5-base \
 --batch_size=50 \
 --state_file=${sts_state_file} \
---device='cuda:0' \
+--device=cuda:0 \
 --sts_mode=None
 ```
 - `model_name`: Name of basic STS model used to label evidence (Consistent with the model in the `state_file`)
 - `state_file`: The parameter file of trained STS model
 - `sts_mode`: Mode of labeling evidence (one of the 'f1_score' and None), None indicates that we use STS model to annotate evidence
-Simply, you can run the following command:
-```
-python Reconstruct_Data.py
-```
+
 The dataset with annotated evidence will be shown in `MRC/Data/Datasets/ExpMRC/`
 
 ## Training
-Switch to the path where the `T5InterMRC.py` script is located, then
+Switch to the path where the `T5InterMRC.py` script is located. 
+
+Then, simply run the following command:
+```
+python T5InterMRC.py --is_new --is_training
+```
+or
 ```bash
 python T5InterMRC.py \
 --random_seed=52 \
@@ -49,12 +57,12 @@ python T5InterMRC.py \
 --save_steps=100 \
 --data_name=squad \
 --data_path=./Data/Datasets/ExpMRC/ \
---device='cuda:0' \
+--device=cuda:0 \
 --log_file_name=./loss.txt \
 --state_file=./Data/T5${time}.pt 
 --prediction_file=./pred.json \
 --mode=t5-base \
---is_new
+--is_new \
 --is_training
 ```
 - `model_name`: Name of the model you are using (must be one of the 'T5-Shared', 'T5-InterMRC'(default) and 'T5-Independent')
@@ -64,10 +72,6 @@ python T5InterMRC.py \
 - `mode`: Mode of annotating evidence. `t5-base` denotes that `t5-base` model is used to annotate evidence
 - `is_new` indicates whether to use the newly labeled data to train the model. If it is set to false, it indicates to use pseudo data to train the model
 
-Simply, you can run the following command:
-```
-python T5InterMRC.py --is_new --is_training
-```
 ## Prediction and Evaluation
 After training, you can use `Prediction.py` to get the prediction file by running:
 ```
