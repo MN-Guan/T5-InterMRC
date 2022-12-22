@@ -7,7 +7,7 @@ Code for the paper "A T5-based Interpretable Reading Comprehension Model with mo
     | -- MRC                     # Machine Reading Comprehension Module  
     | -- STS                     # Semantic Textual Similarity Module  
     | -- __init__.py             # Identifier of package  
-    | -- Auxiliary_Functions.py  # Describe auxiliary functions such as display output and initialization of random variables   
+    | -- Auxiliary_Functions.py  # Describe auxiliary functions such as display of output and initialization of random variables   
     | -- Metrics.py              # Metrics script for various tasks  
     | -- Preprocess.py           # Common preprocessing script for each task  
     | -- T5Model.py              # Script of our model  
