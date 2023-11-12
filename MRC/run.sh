@@ -1,4 +1,4 @@
-==>>bart-base
+==>>the script to train Bart-InterMRC(base), where the evidence \in the dateset is annotated by the STS(T5-LR-DA(B)) model
 python BartInterMRC.py \
 --is_new \
 --is_training \
@@ -11,7 +11,7 @@ python BartInterMRC.py \
 --num 2 \
 --device cuda:0 
 
-
+==>>the script to train Bart-InterMRC(base) with pseudo datasets
 python BartInterMRC.py \
 --is_training \
 --model_level facebook/bart-base \
@@ -23,7 +23,7 @@ python BartInterMRC.py \
 --num 2\
 --device cuda:0 
 
-==>>bart-large
+==>>the script to train Bart-InterMRC(large) with pseudo datasets
 python BartInterMRC.py \
 --is_training \
 --model_level facebook/bart-large \
