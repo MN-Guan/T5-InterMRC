@@ -1,4 +1,4 @@
-==>>the script to train Bart-InterMRC(base), where the evidence \in the dateset is annotated by the STS(T5-LR-DA(B)) model
+==>>the script to train Bart-InterMRC(base), where the evidence in the dateset is annotated by the STS(T5-LR-DA(B)) model
 python BartInterMRC.py \
 --is_new \
 --is_training \
