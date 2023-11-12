@@ -14,7 +14,7 @@ Code for the paper "A T5-based Interpretable Reading Comprehension Model with mo
 ```
 # Requirements
 ```
-python 3.8.17
+python 3.8.12
 ```
 
 # Install dependent packages
