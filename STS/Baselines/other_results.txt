@@ -1,0 +1,68 @@
+base & large
+bert-nli:   George-Ogden/bert-large-cased-finetuned-mnli
+roberta-nli: George-Ogden/roberta-large-cased-finetuned-mnli
+
+
+python bert.py --model_name_or_path bert-base-uncased --dataset_name STSb
+pearson_coefficient:89.91865979, spearman_coefficient:89.55451920, global_step:450
+pearson_coefficient:85.75244370, spearman_coefficient:84.38751800
+python bert.py --model_name_or_path bert-base-uncased --dataset_name SICK
+pearson_coefficient:88.14264857, spearman_coefficient:83.86293090, global_step:100
+pearson_coefficient:88.66575506, spearman_coefficient:83.01914149
+
+python bert.py --model_name_or_path ./../Data/Model_States/bert-base-mnli --dataset_name STSb
+pearson_coefficient:90.30461205, spearman_coefficient:90.12020847, global_step:550
+pearson_coefficient:88.44612805, spearman_coefficient:88.14483059
+python bert.py --model_name_or_path ./../Data/Model_States/bert-base-mnli --dataset_name SICK
+pearson_coefficient:89.80508752, spearman_coefficient:86.32824987, global_step:200
+pearson_coefficient:90.06561186, spearman_coefficient:85.47496560
+
+
+python bert.py --model_name_or_path bert-large-uncased --dataset_name STSb
+pearson_coefficient:90.39168863, spearman_coefficient:90.07227196, global_step:450
+pearson_coefficient:86.93173240, spearman_coefficient:85.80435827
+python bert.py --model_name_or_path bert-large-uncased --dataset_name SICK
+pearson_coefficient:89.98058725, spearman_coefficient:85.67066450, global_step:150
+pearson_coefficient:89.84773682, spearman_coefficient:84.96202167
+
+python bert.py --model_name_or_path ./../Data/Model_States/bert-large-mnli --dataset_name STSb
+pearson_coefficient:90.56533700, spearman_coefficient:90.53801374, global_step:500
+pearson_coefficient:88.92032504, spearman_coefficient:89.01249313
+python bert.py --model_name_or_path ./../Data/Model_States/bert-large-mnli --dataset_name SICK
+pearson_coefficient:91.10991736, spearman_coefficient:87.80952229, global_step:50
+pearson_coefficient:90.31411301, spearman_coefficient:85.87098008
+
+
+
+python sbert.py  --model_name_or_path ./../Data/Model_States/bert-base-mnli/ --dataset_name STSb
+eva:  Pearson: 0.8585   Spearman: 0.8603
+test: Pearson: 0.8327	Spearman: 0.8338
+python sbert.py  --model_name_or_path ./../Data/Model_States/bert-base-mnli/ --dataset_name SICK
+eva:  Pearson: 0.8794   Spearman: 0.8466
+test: Pearson: 0.8793	Spearman: 0.8382
+
+python sbert.py  --model_name_or_path ./../Data/Model_States/roberta-base-mnli/ --dataset_name STSb
+eva:  Pearson: 0.8675   Spearman: 0.8700
+test: Pearson: 0.8490	Spearman: 0.8495
+python sbert.py  --model_name_or_path ./../Data/Model_States/roberta-base-mnli/ --dataset_name SICK
+eva:  Pearson: 0.8856   Spearman: 0.8495
+test: Pearson: 0.8830	Spearman: 0.8405
+
+
+
+python sbert.py  --model_name_or_path ./../Data/Model_States/bert-large-mnli/ --dataset_name STSb
+eva:  Pearson: 0.8792   Spearman: 0.8800
+test: Pearson: 0.8524	Spearman: 0.8552
+python sbert.py  --model_name_or_path ./../Data/Model_States/bert-large-mnli/ --dataset_name SICK
+eva:  Pearson: 0.8822   Spearman: 0.8569
+test: Pearson: 0.8862	Spearman: 0.8467
+
+python sbert.py  --model_name_or_path ./../Data/Model_States/roberta-large-mnli/ --dataset_name STSb
+eva:  Pearson: 0.8788   Spearman: 0.8823
+test: Pearson: 0.8495	Spearman: 0.8525
+python sbert.py  --model_name_or_path ./../Data/Model_States/roberta-large-mnli/ --dataset_name SICK
+eva:  Pearson: 0.8810   Spearman: 0.8596
+test: Pearson: 0.8888	Spearman: 0.8536
+
+
+

@@ -1,0 +1,10 @@
+T5-LR-DA
+The STS model has 222,903,552 parameters. 
+pearson_coefficient:91.56433401, spearman_coefficient:91.39612845, global_step:1400
+test_features_len:1379
+pearson_coefficient:89.90763393, spearman_coefficient:89.47996477
+The STS model has 222,903,552 parameters. 
+pearson_coefficient:91.66797165, spearman_coefficient:91.48101820, global_step:1550
+test_features_len:1379
+pearson_coefficient:89.68917313, spearman_coefficient:89.39501757
+

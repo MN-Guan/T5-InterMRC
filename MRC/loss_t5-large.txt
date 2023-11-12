@@ -1,0 +1,49 @@
+The MRC model has 336,178,560 parameters. 
+
+The MRC model has 1,140,396,544 parameters. 
+ans_f1:82.828, evi_f1:84.708, all_f1:73.785, global_step:100
+ans_f1:85.003, evi_f1:87.184, all_f1:76.633, global_step:200
+ans_f1:82.756, evi_f1:85.210, all_f1:74.609, global_step:300
+ans_f1:80.085, evi_f1:83.041, all_f1:71.258, global_step:400
+ans_f1:79.515, evi_f1:84.553, all_f1:71.355, global_step:500
+ans_f1:79.519, evi_f1:84.408, all_f1:71.080, global_step:600
+ans_f1:84.619, evi_f1:86.884, all_f1:75.881, global_step:700
+ans_f1:85.710, evi_f1:87.720, all_f1:77.284, global_step:800
+ans_f1:85.790, evi_f1:85.770, all_f1:76.448, global_step:900
+ans_f1:87.542, evi_f1:86.993, all_f1:78.866, global_step:1000
+ans_f1:89.354, evi_f1:87.803, all_f1:80.135, global_step:1100
+ans_f1:87.629, evi_f1:87.065, all_f1:78.745, global_step:1200
+ans_f1:86.989, evi_f1:86.494, all_f1:77.571, global_step:1300
+ans_f1:88.453, evi_f1:86.858, all_f1:78.984, global_step:1400
+ans_f1:88.103, evi_f1:86.221, all_f1:78.398, global_step:1500
+ans_f1:88.164, evi_f1:86.409, all_f1:78.576, global_step:1600
+ans_f1:88.737, evi_f1:86.170, all_f1:78.909, global_step:1700
+ans_f1:89.105, evi_f1:86.430, all_f1:79.235, global_step:1800
+ans_f1:89.448, evi_f1:86.854, all_f1:79.610, global_step:1900
+ans_f1:88.684, evi_f1:86.987, all_f1:79.571, global_step:2000
+ans_f1:89.597, evi_f1:86.402, all_f1:80.075, global_step:2100
+ans_f1:88.921, evi_f1:86.677, all_f1:79.224, global_step:2200
+ans_f1:88.379, evi_f1:86.797, all_f1:78.858, global_step:2300
+ans_f1:89.818, evi_f1:86.756, all_f1:79.890, global_step:2400
+ans_f1:88.755, evi_f1:87.277, all_f1:79.406, global_step:2500
+ans_f1:88.980, evi_f1:87.417, all_f1:79.476, global_step:2600
+ans_f1:89.427, evi_f1:87.749, all_f1:80.233, global_step:2700
+ans_f1:89.533, evi_f1:87.414, all_f1:79.941, global_step:2800
+ans_f1:89.927, evi_f1:87.138, all_f1:80.307, global_step:2900
+ans_f1:89.871, evi_f1:87.353, all_f1:80.315, global_step:3000
+ans_f1:88.986, evi_f1:86.962, all_f1:79.331, global_step:3100
+ans_f1:90.134, evi_f1:87.101, all_f1:80.361, global_step:3200
+ans_f1:88.492, evi_f1:86.934, all_f1:79.052, global_step:3300
+ans_f1:89.806, evi_f1:87.636, all_f1:80.392, global_step:3400
+ans_f1:90.355, evi_f1:87.620, all_f1:80.657, global_step:3500
+ans_f1:89.578, evi_f1:88.213, all_f1:80.686, global_step:3600
+ans_f1:90.347, evi_f1:87.887, all_f1:81.043, global_step:3700
+ans_f1:91.010, evi_f1:88.108, all_f1:81.392, global_step:3800
+ans_f1:89.764, evi_f1:87.677, all_f1:80.139, global_step:3900
+ans_f1:90.015, evi_f1:87.797, all_f1:80.411, global_step:4000
+ans_f1:90.319, evi_f1:87.443, all_f1:80.629, global_step:4100
+ans_f1:90.617, evi_f1:88.100, all_f1:81.014, global_step:4200
+ans_f1:90.558, evi_f1:87.957, all_f1:81.044, global_step:4300
+
+
+
