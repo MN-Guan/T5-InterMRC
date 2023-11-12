@@ -6,8 +6,12 @@
     | -- MQA_preprocess.py     # Machine Reading Comprehension Preprocessing script  
     | -- Prediction.py         # Use saved MRC model to predict answers and evidences and generate prediction file  
     | -- Reconstruct_Data.py   # Script file for labeling evidence in SQuAD dataset using STS model    
-    | -- T5InterMRC.py         # Training Script   
-    | -- eval_expmrc.py        # ExpMRC official evaluation script  
+    | -- T5InterMRC.py         # Training Script for T5-InterMRC     
+    | -- BartInterMRC.py       # Training Script for Bart-InterMRC
+    | -- eval_expmrc.py        # ExpMRC official evaluation script
+    | -- loss_bart-base2.txt   # The file to record the training log of Bart-InterMRC model 
+    | -- loss_t5-large.txt     # The file to record the training log of Bart-InterMRC model 
+    | -- run.sh                # The script for train our MRC models
 ```
 ## Evidence annotation
 Switch to the path where the `Reconstruct_Data.py` script is located.
