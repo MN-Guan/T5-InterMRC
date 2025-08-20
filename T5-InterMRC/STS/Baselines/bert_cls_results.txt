@@ -1,0 +1,20 @@
+python bert_cls.py  (It will automaticly product all results of all datasets.)
+
+----stsb_dev----bert-cls-base----
+pearson_coefficient:78.16, spearman_coefficient:79.80
+----stsb_test----bert-cls-base----
+pearson_coefficient:73.60, spearman_coefficient:76.20
+----sick_dev----bert-cls-base----
+pearson_coefficient:70.77, spearman_coefficient:72.85
+----sick_test----bert-cls-base----
+pearson_coefficient:72.13, spearman_coefficient:72.24
+
+----stsb_dev----bert-cls-large----
+pearson_coefficient:80.63, spearman_coefficient:82.03
+----stsb_test----bert-cls-large----
+pearson_coefficient:76.02, spearman_coefficient:78.16
+----sick_dev----bert-cls-large----
+pearson_coefficient:70.47, spearman_coefficient:73.68
+----sick_test----bert-cls-large----
+pearson_coefficient:71.02, spearman_coefficient:72.38
+

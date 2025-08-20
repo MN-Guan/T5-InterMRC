@@ -1,0 +1,10 @@
+Bart-InterMRC(base) 
+The parameters of T5 is large than 41.4% of Bart in base level.
+The MRC model has 196,920,576 parameters. 
+ans_f1:85.957, evi_f1:86.092, all_f1:77.227, global_step:4200
+
+Bart-InterMRC(large)
+The parameters of T5 is large than 46.6% of Bart in large level.
+The MRC model has 608,904,192 parameters.
+ans_f1:89.309, evi_f1:87.283, all_f1:80.150, global_step:3200
+
